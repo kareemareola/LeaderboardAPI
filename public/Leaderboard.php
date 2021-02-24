@@ -8,8 +8,6 @@
 
 class Leaderboard
 {
-
-
     // Setting up all the initial variables
     private $DB;
     private $mysql_servername = "35.183.183.180";
@@ -48,13 +46,11 @@ class Leaderboard
                 $resultJSON[] = $resultRow;
             }
             return json_encode($resultJSON, JSON_PRETTY_PRINT);
-        } // TODO: handle the exception here...
-        catch (Exception $e) {
-
+        } catch (Exception $e) {
+            $error['error'] = "Error during list all query";
+            return json_encode($error, JSON_PRETTY_PRINT);
         }
     }
-
-    // TODO: Improve error handling...
 
     // Increases the players score by one point...
     function increasePlayerScore($playerId)
@@ -68,9 +64,9 @@ class Leaderboard
             $result = mysqli_query($db, $query);
 
             return json_encode($result, JSON_PRETTY_PRINT);
-        } // TODO: handle the exception here...
-        catch (Exception $e) {
-
+        } catch (Exception $e) {
+            $error['error'] = "Error during Increase score query";
+            return json_encode($error, JSON_PRETTY_PRINT);
         }
     }
 
@@ -88,7 +84,8 @@ class Leaderboard
             return json_encode($result, JSON_PRETTY_PRINT);
         } // TODO: handle the exception here...
         catch (Exception $e) {
-
+            $error['error'] = "Error during score decrease query";
+            return json_encode($error, JSON_PRETTY_PRINT);
         }
     }
 
@@ -102,18 +99,17 @@ class Leaderboard
             if (array_key_exists("playerName", $userInfoArray)) $playerName = $userInfoArray["playerName"];
             if (array_key_exists("playerAddress", $userInfoArray)) $playerAddress = $userInfoArray["playerAddress"];
             if (array_key_exists("playerAge", $userInfoArray)) $playerAge = $userInfoArray["playerAge"];
-            // TODO: add error handling for not found vars here
+
             // Query that does the actual insert into the table...
             $query = "INSERT INTO $currentTable 
                       (player_name, age, address)
                       VALUES 
                       ('$playerName', $playerAge, '$playerAddress')";
             $result = mysqli_query($db, $query);
-
             return json_encode($result, JSON_PRETTY_PRINT);
-        } // TODO: handle the exception here...
-        catch (Exception $e) {
-
+        } catch (Exception $e) {
+            $error['error'] = "Error during new player addition query";
+            return json_encode($error, JSON_PRETTY_PRINT);
         }
     }
 
@@ -126,11 +122,10 @@ class Leaderboard
             $query = "DELETE FROM $currentTable 
                       WHERE player_id = $playerId ";
             $result = mysqli_query($db, $query);
-
             return json_encode($result, JSON_PRETTY_PRINT);
-        } // TODO: handle the exception here...
-        catch (Exception $e) {
-
+        } catch (Exception $e) {
+            $error['error'] = "Error during deletion query";
+            return json_encode($error, JSON_PRETTY_PRINT);
         }
     }
 
@@ -148,9 +143,9 @@ class Leaderboard
             else return json_encode("Player not found", JSON_PRETTY_PRINT);
 
             return json_encode($player, JSON_PRETTY_PRINT);
-        } // TODO: handle the exception here...
-        catch (Exception $e) {
-
+        } catch (Exception $e) {
+            $error['error'] = "Error during getting player details query";
+            return json_encode($error, JSON_PRETTY_PRINT);
         }
     }
 
