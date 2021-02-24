@@ -45,51 +45,116 @@ $app->get('/list', function (Request $request, Response $response, $args) {
 
 // Decreases the score of a player by one point
 $app->post('/players/downscore/', function (Request $request, Response $response, $args) {
-    $data = $request->getParsedBody();
-    $playerId = $data['playerId'];
-    $Leaderboard = new Leaderboard();
-    $decreaseRequestResponse = $Leaderboard->decreasePlayerScore($playerId);
-    $response->getBody()->write($decreaseRequestResponse);
-    return $response;
+    try {
+        $data = $request->getParsedBody();
+        if (!is_null($data)) {
+            if (array_key_exists("playerId", $data)) {
+                $playerId = $data['playerId'];
+            }
+            else {
+                throw new Exception("playerId not found.");
+            }
+            $Leaderboard = new Leaderboard();
+            $decreaseRequestResponse = $Leaderboard->decreasePlayerScore($playerId);
+            $response->getBody()->write($decreaseRequestResponse);
+            return $response;
+        }
+        else {
+            throw new Exception("Invalid or malformed data.");
+        }
+    } catch (Exception $exception) {
+        $response->getBody()->write("{'error': '" . $exception->getMessage() . " '}");
+        return $response->withStatus(400);
+    }
 });
 
 // Increases the score of a player by one point
 $app->post('/players/upscore/', function (Request $request, Response $response, $args) {
-    $data = $request->getParsedBody();
-    $playerId = $data['playerId'];
-    $Leaderboard = new Leaderboard();
-    $increaseRequestResponse = $Leaderboard->increasePlayerScore($playerId);
-    $response->getBody()->write($increaseRequestResponse);
-    return $response;
+    try {
+        $data = $request->getParsedBody();
+        if (!is_null($data)) {
+            if (array_key_exists("playerId", $data)) {
+                $playerId = $data['playerId'];
+            }
+            else {
+                throw new Exception("playerId not found.");
+            }
+            $Leaderboard = new Leaderboard();
+            $increaseRequestResponse = $Leaderboard->increasePlayerScore($playerId);
+            $response->getBody()->write($increaseRequestResponse);
+            return $response;
+        }
+        else{
+            throw new Exception("Invalid or malformed data");
+        }
+    } catch (Exception $exception) {
+        $response->getBody()->write("{'error': '" . $exception->getMessage() . " '}");
+        return $response->withStatus(400);
+    }
 });
 
-// TODO: improve all data getting empty field error handling
 // Adds a player to the system, given the playerName, playerAge and playerAddress
 $app->post('/players/add/', function (Request $request, Response $response, $args) {
-    $data = $request->getParsedBody();
+    try {
+        $data = $request->getParsedBody();
 
-    $playerName = $data['playerName'];
-    $playerAge = $data['playerAge'];
-    $playerAddress = $data['playerAddress'];
-    $playerInfoArray = [
-        'playerName' => $playerName,
-        'playerAge' => $playerAge,
-        'playerAddress' => $playerAddress
-    ];
-    $Leaderboard = new Leaderboard();
-    $increaseRequestResponse = $Leaderboard->addNewPlayer($playerInfoArray);
-    $response->getBody()->write($increaseRequestResponse);
-    return $response;
+        if (array_key_exists("playerName", $data)) {
+            $playerName = $data['playerName'];
+        }
+        else {
+            throw new Exception("playerName not found.");
+        }
+        if (array_key_exists("playerName", $data)) {
+            $playerAge = $data['playerAge'];
+        }
+        else {
+            throw new Exception("playerAge not found.");
+        }
+        if (array_key_exists("playerAddress", $data)) {
+            $playerAddress = $data['playerAddress'];
+        }
+        else {
+            throw new Exception("playerAddress not found.");
+
+        }
+        $playerInfoArray = [
+            'playerName' => $playerName,
+            'playerAge' => $playerAge,
+            'playerAddress' => $playerAddress
+        ];
+        $Leaderboard = new Leaderboard();
+        $increaseRequestResponse = $Leaderboard->addNewPlayer($playerInfoArray);
+        $response->getBody()->write($increaseRequestResponse);
+        return $response;
+    } catch (Exception $exception) {
+        $response->getBody()->write("{'error': '" . $exception->getMessage() . " '}");
+        return $response->withStatus(400);
+    }
 });
 
 // Removes a given player from the system based on playerId
 $app->post('/players/remove/', function (Request $request, Response $response, $args) {
-    $data = $request->getParsedBody();
-    $playerId = $data['playerId'];
-    $Leaderboard = new Leaderboard();
-    $increaseRequestResponse = $Leaderboard->deletePlayer($playerId);
-    $response->getBody()->write($increaseRequestResponse);
-    return $response;
+    try {
+        $data = $request->getParsedBody();
+        if (!is_null($data)) {
+            if (array_key_exists("playerId", $data)) {
+                $playerId = $data['playerId'];
+            }
+            else {
+                throw new Exception("playerId not found.");
+            }
+            $Leaderboard = new Leaderboard();
+            $increaseRequestResponse = $Leaderboard->deletePlayer($playerId);
+            $response->getBody()->write($increaseRequestResponse);
+            return $response;
+        }
+        else {
+            throw new Exception("Invalid or malformed request");
+        }
+    } catch (Exception $exception) {
+        $response->getBody()->write("{'error': '" . $exception->getMessage() . " '}");
+        return $response->withStatus(400);
+    }
 });
 
 $app->run();
