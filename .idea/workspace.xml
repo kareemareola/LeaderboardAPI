@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef599f81-a18c-4060-9a8a-2dfaed409258" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1oqg893GgXjMDdfKtuAYPTX5U5T" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kariim\PhpstormProjects\CanadaDrivesAPI\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kariim\PhpstormProjects\CanadaDrivesAPI\public" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef599f81-a18c-4060-9a8a-2dfaed409258" name="Default Changelist" comment="" />
+      <created>1614019372310</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614019372310</updated>
+      <workItem from="1614019373372" duration="165000" />
+      <workItem from="1614019791550" duration="31182000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2472" y="182" key="#Deployment" timestamp="1614179910135">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2472" y="182" key="#Deployment/0.0.3840.1040@0.0.3840.1040" timestamp="1614179910135" />
+    <state x="2557" y="205" key="#Options" timestamp="1614019522514">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2557" y="205" key="#Options/0.0.3840.1040@0.0.3840.1040" timestamp="1614019522514" />
+    <state x="2456" y="169" key="#SSH_Configurations" timestamp="1614137649268">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2456" y="169" key="#SSH_Configurations/0.0.3840.1040@0.0.3840.1040" timestamp="1614137649268" />
+    <state x="2334" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614019383377">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2334" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1614019383377" />
+    <state x="2381" y="168" key="SettingsEditor" timestamp="1614117203088">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2381" y="168" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1614117203088" />
+    <state x="2696" y="301" key="chooseDestDirectoryDialog" timestamp="1614020177659">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2696" y="301" key="chooseDestDirectoryDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1614020177659" />
+    <state x="2614" y="331" width="532" height="615" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1614170316339">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2614" y="331" width="532" height="615" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1614170316339" />
+    <state x="2765" y="254" key="ftp.server.browser" timestamp="1614138761816">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2765" y="254" key="ftp.server.browser/0.0.3840.1040@0.0.3840.1040" timestamp="1614138761816" />
+    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1614117736584">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup/0.0.3840.1040/3840.0.1280.680@0.0.3840.1040" timestamp="1614042051596" />
+    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1614117736584" />
+  </component>
+</project>

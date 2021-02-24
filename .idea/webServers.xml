@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="966bb64c-552f-4fd7-a355-cba49006be4d" name="Local Wamp CanadaDrives" url="http://localhost/canadadrives/">
+        <fileTransfer mountedRoot="C:\wamp64\www\canadadrives" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
