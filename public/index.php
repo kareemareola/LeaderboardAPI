@@ -6,8 +6,6 @@ use Slim\Factory\AppFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-error_reporting(E_ALL); // TODO: remove all error reporting
-
 $app = AppFactory::create();
 
 $app->setBasePath((function () {
@@ -24,11 +22,9 @@ $app->setBasePath((function () {
 
 $app->addBodyParsingMiddleware();
 
-// TODO: Get rid of an requests from here and add them to routes.php
 require_once 'Leaderboard.php';
 $Leaderboard = new Leaderboard();
 
-// TODO: remove this generic route
 // Welcome route for base URL
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Welcome to the leaderboard API<br> Please POST to the valid endpoints.");
